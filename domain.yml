@@ -1,0 +1,47 @@
+intents:
+  - greet
+  - address_date
+  - address
+  - date
+  - goodbye
+  - waiting
+
+slots:
+  address:
+    type: text
+  date:
+    type: text
+  matches:
+    type: unfeaturized
+
+entities:
+  - address
+  - date
+
+actions:
+  - utter_greet
+  - utter_address
+  - utter_date
+  - action_report_weather
+  - utter_report_weather
+  - utter_goodbye
+  - utter_waiting
+
+templates:
+  utter_greet:
+  - text: "你好，请输入城市和时间"
+
+  utter_address:
+  - text: "哪座城市？"
+
+  utter_date:
+  - text: "什么时候？"
+
+  utter_waiting:
+  - text: "正在查询中..."
+
+  utter_goodbye:
+  - text: "拜拜"
+
+  utter_report_weather:
+  - text: "{matches}"

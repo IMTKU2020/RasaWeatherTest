@@ -1,0 +1,20 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: zh
+pipeline:
+  - name: nlp_mitie #初始化mitie
+    model: data/total_word_feature_extractor_zh.dat  # 加载mitie模型
+  - name: tokenizer_jieba  # 使用jieba分词
+  - name: ner_mitie  # mitie的命名实体识别
+  - name: ner_synonyms
+  - name: intent_featurizer_mitie  # 特征提取
+  - name: intent_classifier_sklearn  # sklearn的意图分类模型
+
+
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy
