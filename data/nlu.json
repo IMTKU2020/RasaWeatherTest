@@ -1,0 +1,56 @@
+[
+      {
+        "intent": "greet",
+        "entities": [
+        ],
+        "text": "你好"
+      },
+{
+        "intent": "goodbye",
+        "entities": [
+        ],
+        "text": "再见"
+      },
+      {
+        "intent": "address",
+        "entities": [
+          {
+            "start": 9,
+            "end": 11,
+            "value": "香港",
+            "entity": "address"
+          }
+        ],
+        "text": "不好意思可以帮我查香港的天气"
+      },
+      {
+        "intent": "address_date",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "今天",
+            "entity": "date"
+          },
+          {
+            "start": 2,
+            "end": 4,
+            "value": "台北",
+            "entity": "address"
+          }
+        ],
+        "text": "今天台北天气如何"
+      },
+      {
+        "intent": "date",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "今天",
+            "entity": "date"
+          }
+        ],
+        "text": "今天去外边要穿薄毛衣吗"
+      }
+]
